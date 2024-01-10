@@ -1,0 +1,18 @@
+{% extends 'templates_project/base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Регистрация нового пользователя</h1>
+<div>
+    Введите пожалуста корректные данные
+
+</div>
+
+<form action="." method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <p><input type="submit" value="Зарегистрировать"></p>
+
+</form>
+
+{% endblock %}
