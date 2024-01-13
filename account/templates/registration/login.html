@@ -1,5 +1,9 @@
 {% extends 'templates_project/base.html' %}
+
+{% load static %}
+
 {% block content %}
+
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}

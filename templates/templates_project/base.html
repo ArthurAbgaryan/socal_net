@@ -7,13 +7,17 @@
 <body>
 {% if request.user.is_authenticated %}
 <ul>
-    <li><a href="{% url 'main' %}">My page</a></li>
+    <li><a href="{% url 'main' %}">Main</a></li>
     {%  endif %}
     {% if request.user.is_authenticated %}
     <a href="{% url 'logout' %}">Log out</a><br>
-    <a href="{% url 'password_change' %}">Change password</a>
+    <a href="{% url 'password_change' %}">Изменить пароль</a>
     {% else %}
-    <a href="{% url 'login' %}">Log in</a>
+
+
+    <a href="{% url 'register' %}">Регистрация</a>
+
+
     {% endif %}
 </ul>
 {% block content %}
